@@ -1,6 +1,6 @@
 // 1. Most Active Authors
 
-import https from 'https'
+const https = require('https')
 
 function httpRequest(options) {
     return new Promise ((resolve, reject) => {

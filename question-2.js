@@ -3,8 +3,9 @@
 function getMin(s) {
     let balance = 0
     let answer = 0
+    let length = s.length
 
-    for (let i=0; i<s.length; i++) {
+    for (let i = 0; i < length; i++) {
         if (s[i]=='(') {
             balance += 1
         } else {
@@ -15,9 +16,9 @@ function getMin(s) {
             answer += 1
             balance += 1
         }
-
-        return balance + answer
     }
+    return (balance + answer)
 }
 
-getMin('(()))')
+const result = getMin(')))()()()())())())))))())))))))())()))()()()))))))(((')
+console.log(result)

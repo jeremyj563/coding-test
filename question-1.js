@@ -5,12 +5,12 @@ const https = require('https')
 function httpRequest(options) {
     return new Promise ((resolve, reject) => {
         const request = https.request(options, response => {
-            let body = [];
+            let body = []
             response.on('data', c => body.push(c))
-            response.on('end', () => resolve(JSON.parse(body)));
-            response.on('error', e => reject(e));
-        });
-        request.end();
+            response.on('end', () => resolve(JSON.parse(body)))
+            response.on('error', e => reject(e))
+        })
+        request.end()
     })
 }
 

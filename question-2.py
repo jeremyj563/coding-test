@@ -9,7 +9,7 @@ def getMin(s):
         if (s[i] == '('):
             balance += 1
         else:
-            balance += -1
+            balance -= 1
         
         if (balance == -1):
             answer += 1

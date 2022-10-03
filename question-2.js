@@ -3,7 +3,7 @@
 function getMin(s) {
     let balance = 0
     let answer = 0
-    let length = s.length
+    const length = s.length
 
     for (let i = 0; i < length; i++) {
         if (s[i]=='(') {

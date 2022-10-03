@@ -1,21 +1,21 @@
 // 2. Balancing Parentheses
 
 function getMin(s) {
-    let minInserted = 0
-    let stack = []
+    let inserted = 0
+    let arr = []
     
     for (const char of s) {
         if (char === '(') {
-            stack.push('(')
+            arr.push('(')
         } else {
-            if (stack.length > 0) {
-                stack.shift()
+            if (arr.length > 0) {
+                arr.pop()
             } else {
-                minInserted++
+                inserted++
             }
         }
     }
-    return (minInserted + stack.length)
+    return (inserted + arr.length)
 }
 
 const result = getMin(')))()()()())())())))))())))))))())()))()()()))))))(((')

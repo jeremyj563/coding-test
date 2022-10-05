@@ -6,7 +6,7 @@ function getMin(s) {
     const length = s.length
 
     for (let i = 0; i < length; i++) {
-        if (s[i]=='(') {
+        if (s[i] == '(') {
             balance += 1
         } else {
             balance -= 1

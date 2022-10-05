@@ -2,22 +2,16 @@
 
 function getMin(s) {
     let balance = 0
-    let answer = 0
-    const length = s.length
+    let count = 0
 
-    for (let i = 0; i < length; i++) {
-        if (s[i] == '(') {
-            balance += 1
+    for (const char of s) {
+        if (char === '(') {
+            balance++
         } else {
-            balance -= 1
-        }
-
-        if (balance == -1) {
-            answer += 1
-            balance += 1
+            balance ? balance-- : count++
         }
     }
-    return (balance + answer)
+    return (balance + count)
 }
 
 const result = getMin(')))()()()())())())))))())))))))())()))()()()))))))(((')
